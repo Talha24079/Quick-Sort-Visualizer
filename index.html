@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quick Sort Visualizer</h1>
+        <div class="glass-panel">
+            <div class="controls">
+                <button id="generateBtn">Generate New Array</button>
+                <input type="text" id="arrayInput" placeholder="e.g. 50, 100, 20">
+                <button id="setArrayBtn">Set Array</button>
+            </div>
+            <div class="controls playback-controls">
+                <button id="sortBtn">Sort</button>
+                <button id="playPauseBtn" disabled>Play/Pause</button>
+                <button id="prevBtn" disabled>Prev Step</button>
+                <button id="nextBtn" disabled>Next Step</button>
+                <div class="slider-container">
+                    <label for="speedSlider">Speed</label>
+                    <input type="range" id="speedSlider" min="10" max="1000" value="50" dir="rtl">
+                </div>
+            </div>
+            <div id="status-text">Ready to sort!</div>
+        </div>
+        <div id="bars-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

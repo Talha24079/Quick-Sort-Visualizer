@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 900px;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(45deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.controls {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(167, 119, 227, 0.4);
+}
+
+button:disabled {
+    background: #444;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 15px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#speedSlider {
+    cursor: pointer;
+}
+
+#status-text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+#bars-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 400px;
+    gap: 2px;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bar {
+    width: 20px;
+    background: linear-gradient(to top, #00c6ff, #0072ff);
+    border-radius: 4px 4px 0 0;
+    transition: height 0.2s ease, background 0.2s;
+}
+
+.bar.yellow { background: linear-gradient(to top, #f12711, #f5af19); }
+.bar.orange { background: linear-gradient(to top, #ff9966, #ff5e62); }
+.bar.red { background: linear-gradient(to top, #cb2d3e, #ef473a); }
+.bar.green { background: linear-gradient(to top, #11998e, #38ef7d); }
